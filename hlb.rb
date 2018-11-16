@@ -1,14 +1,17 @@
 class Hlb < Formula
-  desc "CLI that provides a unified & interactive interface to multiple git repository hosting services"
+  desc "CLI that provides unified & interactive interface to multiple git repository hosting services"
   homepage "https://github.com/mpppk/hlb"
-  url "https://github.com/mpppk/hlb/releases/download/v0.0.2/ghr_v0.0.2_darwin_amd64.zip"
-  sha256 "940227e1c43df50e0bc7ef1bfd2efd2c6edbddc67a68325338700e6d5b5e4638"
+  url "https://github.com/mpppk/hlb/releases/download/v0.0.3/hlb_0.0.3_Darwin_x86_64.tar.gz"
+  version "0.0.3"
+  sha256 "ba1bde407a89297a90eb31c27daf7d9f7e2a465d5a5d3f464b091b979ca310ed"
+  
+  depends_on "peco"
 
   def install
-    bin.install 'hlb'
+    bin.install "hlb"
   end
 
   test do
-    system "#{bin}/hlb"
+    system "#{bin}/hlb --help"
   end
 end
