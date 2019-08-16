@@ -2,15 +2,17 @@
 class Twitter < Formula
   desc "some description"
   homepage "https://github.com/mpppk/twitter"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mpppk/twitter/releases/download/v0.1.0/twitter_0.1.0_darwin_amd64.tar.gz"
-    sha256 "1f4a1a96671dd1451da21d193ae500d66fceed2cd395109285ff9f2f8e7a4983"
+    url "https://github.com/mpppk/twitter/releases/download/v0.1.1/twitter_0.1.1_darwin_amd64.tar.gz"
+    sha256 "045d0e73fa7ff75c4b059c8577288100c257e3ad3cb68c9d765d96e55151e098"
   elsif OS.linux?
-    url "https://github.com/mpppk/twitter/releases/download/v0.1.0/twitter_0.1.0_linux_amd64.tar.gz"
-    sha256 "1de978bc3d8ad4f7bdb824c3c52ba5dc3e3f4b7d77d132202c0b6abd3f5a9251"
+    if Hardware::CPU.intel?
+      url "https://github.com/mpppk/twitter/releases/download/v0.1.1/twitter_0.1.1_linux_amd64.tar.gz"
+      sha256 "b6e1bf2885cd118c3d7a47ff58d757d643f254936613927027608bf6bb1dc02a"
+    end
   end
 
   def install
