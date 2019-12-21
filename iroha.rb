@@ -2,15 +2,17 @@
 class Iroha < Formula
   desc "some description"
   homepage "https://github.com/mpppk/iroha"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mpppk/iroha/releases/download/v0.1.0/iroha_0.1.0_darwin_amd64.tar.gz"
-    sha256 "e16cf829aa86f7dc90913107174cc755012ff81b3a2408016a749df4d4052c83"
+    url "https://github.com/mpppk/iroha/releases/download/v0.1.1/iroha_0.1.1_darwin_amd64.tar.gz"
+    sha256 "cd6b96ebdaffcfbddaa3b770a3568d30abdb2f9adf00b174afb3fba306abefcd"
   elsif OS.linux?
-    url "https://github.com/mpppk/iroha/releases/download/v0.1.0/iroha_0.1.0_linux_amd64.tar.gz"
-    sha256 "1970ba0a1f3078aea941037a0799d734aba14ffb865055c7ef57d9a2b38cab37"
+    if Hardware::CPU.intel?
+      url "https://github.com/mpppk/iroha/releases/download/v0.1.1/iroha_0.1.1_linux_amd64.tar.gz"
+      sha256 "3288dbdb713074645bc7a5926f4afbd71244e19c8717e18f331dcf7aabafca0b"
+    end
   end
 
   def install
