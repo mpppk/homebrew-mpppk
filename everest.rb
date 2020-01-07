@@ -7,11 +7,11 @@ class Everest < Formula
 
   if OS.mac?
     url "https://github.com/mpppk/everest/releases/download/v0.1.0/everest_0.1.0_darwin_amd64.tar.gz"
-    sha256 "3eaf83cc7626c6b8b1e4248cdbaa60b3c00f38e25f12e01906f7d45a2eedd1ed"
+    sha256 "b5d69f725be81b501ecfe5176c691a74d381848108f09a52ae4e071d8f467dd9"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/mpppk/everest/releases/download/v0.1.0/everest_0.1.0_linux_amd64.tar.gz"
-      sha256 "db9a9938d67e3cb19375dac11c310dafe245a962a29185c243f9c38328f2114e"
+      sha256 "a478db2fb7da83485e6b9532178c71b7cdb9b6f6cecc18a1817a557ea6519731"
     end
   end
 
