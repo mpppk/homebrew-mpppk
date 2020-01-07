@@ -2,16 +2,16 @@
 class Everest < Formula
   desc "some description"
   homepage "https://github.com/mpppk/everest"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mpppk/everest/releases/download/v0.1.0/everest_0.1.0_darwin_amd64.tar.gz"
-    sha256 "3f24543f48b6934fe6df0dd7de10fceac1516a4896618bb1467ebe7885f05b23"
+    url "https://github.com/mpppk/everest/releases/download/v0.1.1/everest_0.1.1_darwin_amd64.tar.gz"
+    sha256 "c1192b3c454fb03cda5c8e908e904d2b3a08f853ebd32d0a55c893fd8f74e2ec"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mpppk/everest/releases/download/v0.1.0/everest_0.1.0_linux_amd64.tar.gz"
-      sha256 "d6910d27c1c3f6157fb846c268a2eb409e540ed7ac6cb8ceaf9170c2d49c81b4"
+      url "https://github.com/mpppk/everest/releases/download/v0.1.1/everest_0.1.1_linux_amd64.tar.gz"
+      sha256 "eef8fef3ee552402146d24e4f5d8d25a0b24eb697a9dc4bb3bf474458bda35ae"
     end
   end
 
